@@ -1,0 +1,58 @@
+.navbarContainer{
+    background-color: rgb(40, 116, 240);
+    padding: 5px 10px 7px 10px;
+    width: 100%;
+  }
+  
+  .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbarLeft{
+    display: flex;
+    gap: 10px;
+    color: white;
+  }
+  
+  .navbarRight{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .titleImg{
+    width: 90px;
+  
+  }
+  
+  .shoppingCartIcon{
+    color: white;
+  }
+  
+  .login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    gap: 10px;
+  }
+  
+  
+  .inputBox{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: grey;
+  }
+  
+  .searchIcon{
+    padding-left: 6px;
+  }
+  
+  .inputBox input{
+    width: 100%;
+    padding: 10px;
+    border-style: none;
+  }

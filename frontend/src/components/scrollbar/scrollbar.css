@@ -1,0 +1,12 @@
+.scrollbarContainer{
+    display: flex;
+    scroll-behavior: auto;
+    overflow-y:auto;
+    padding-right: 5px;
+}
+
+.scrollbarContainer::-webkit-scrollbar{
+    display: none;
+}
+
+
