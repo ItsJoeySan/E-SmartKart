@@ -1,29 +1,24 @@
-import { useState } from 'react';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import Carosel from './components/carousel/Carosel';
-import Scrollbar from './components/scrollbar/scrollbar';
-import sidebarDb from "./db/sibebarDB";
-import carouselDb from './db/carouselDB';
+import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 function App() {
   return(
-    <>
+    <BrowserRouter>
  <Header />
- <div className='scrollbarContainer'>
-    {sidebarDb.map((item, index) => (
-      <Scrollbar key={index} src={item.src}/>
-    ))}
- </div>
- <div className='carousel-container'>
-    {carouselDb.map((item, index) => (
-      <Carosel key={index} src={item.src}/>
-    ))}
- </div>
-
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/cart" element={<Cart />}/>
+      <Route path="/about" element={<About />}/>
+      <Route path="/login" element={<Login />}/>
+    </Routes>
  <Footer />
-  </>
+  </BrowserRouter>
     )
 }
 

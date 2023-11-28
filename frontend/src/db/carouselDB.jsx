@@ -1,6 +1,6 @@
 const size = "782/348"
 
-const carouselDb = [
+const carouselDB = [
 {
     name : "redmi note 12",
     src : `https://rukminim2.flixcart.com/fk-p-flap/${size}/image/88ba5f6dcaf239fb.jpg?q=20`
@@ -22,4 +22,4 @@ const carouselDb = [
 }
 ];
 
-export default carouselDb;
+export default carouselDB;

@@ -1,4 +1,3 @@
-
 const value = "76/71";
 const largeValue = "151/143"
 
