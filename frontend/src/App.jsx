@@ -1,23 +1,27 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import Cart from "./pages/Cart";
-import About from "./pages/About";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
+import Header from './components/header/Header.jsx';
+import Footer from './components/footer/Footer.jsx';
+import Cart from "./pages/Cart.jsx";
+import About from "./pages/About.jsx";
+import Home from "./pages/Home.jsx";
+import Login from "./pages/Login.jsx";
+import Product from "./pages/Product.jsx"
 
 function App() {
+
   return(
     <BrowserRouter>
- <Header />
+    <Header />
+    <div className="after-body">
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/cart" element={<Cart />}/>
       <Route path="/about" element={<About />}/>
       <Route path="/login" element={<Login />}/>
+      <Route path="/product/:id" element={<Product />}/>
     </Routes>
- <Footer />
+    </div>
   </BrowserRouter>
     )
 }
