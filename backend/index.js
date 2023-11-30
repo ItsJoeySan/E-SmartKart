@@ -3,16 +3,20 @@ import express from "express";
 import {PORT, uri} from "./config.js";
 import mongoose from "mongoose";
 import flipkartRoutes from "./routes/flipkartRoutes.js";
+import cors from "cors";
 
 const app = express();
 
-app.use(express.json);
-app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+app.use("/",flipkartRoutes);
 
-app.get("/", (req, res) => {
+app.use(cors({
+    origin:"http:localhost:5173",
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders : ['Content-Type']
+}));
 
-    res.send("Hello Joey San");
-});
+
 
 mongoose.connect(uri).then(() => { 
     console.log("App is connected to the database.");

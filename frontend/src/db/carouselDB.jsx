@@ -19,6 +19,9 @@ const carouselDB = [
 },{
     name : "poco m6 pro",
     src : `https://rukminim2.flixcart.com/fk-p-flap/${size}/image/97496c0ca51a976d.jpg?q=20`
+},{
+    name : "gaming laptops",
+    src : `https://rukminim2.flixcart.com/fk-p-flap/${size}/image/746018cb43ce0f86.jpeg?q=60`
 }
 ];
 
