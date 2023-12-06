@@ -1,6 +1,7 @@
 import "../App.css";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Carousel from "../components/carousel/Carousel";
 import axios from "axios";
 
 export default function Product() {
@@ -22,7 +23,7 @@ export default function Product() {
 
   const carauselStyle = {
     width: "auto",
-    height: "495px",
+    height: "384px",
     margin: "0 2px 0 2px",
     padding: "10px 0 25px 0",
   };
@@ -44,12 +45,11 @@ export default function Product() {
   }
   return (
     <>
-      {/* <Carousel
-        items={product}
+      <Carousel
+        items={product.imageLink}
         onImageClick={handleClick}
         styles={{ carauselStyle, caroImgStyle }}
-      /> */}
-      <h1>Product id :{id}</h1>
+      />
       <div>{product.name}</div>
       <div>{product.price.mrpPrice}</div>
       <div>{product.price.currentPrice}</div>

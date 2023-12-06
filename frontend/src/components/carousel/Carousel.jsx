@@ -17,31 +17,31 @@ export default function Carousel({ items, onImageClick, styles }) {
 
   return (
     <div className="carousel" style={styles.carauselStyle}>
-      {items.map((slide) => (
+      {items.map((slide, idx) => (
         <img
-          key={slide.id}
+          key={idx}
           src={slide.src}
-          alt={slide.name}
+          // alt={slide.name}
           onClick={() => onImageClick(slide)}
           className="carousel-img"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
             ...styles.caroImgStyle,
           }}
-        ></img>
+        >
+          {console.log(slide.src)}
+        </img>
       ))}
       <div className="carousel-indicator-container">
         <div className="carousel-indicator-container-child">
-          {items.map((indicator) => (
+          {items.map((indicator, index) => (
             <div
-              key={indicator.id}
+              key={index}
               onClick={() => {
-                handleChange(indicator.id);
+                handleChange(index);
               }}
               className={
-                indicator.id === currentIndex
-                  ? "active-indicator"
-                  : "indicators"
+                index === currentIndex ? "active-indicator" : "indicators"
               }
             ></div>
           ))}
