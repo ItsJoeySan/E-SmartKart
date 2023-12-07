@@ -6,7 +6,7 @@ import slides from "../db/carouselDB";
 import Carousel from "../components/carousel/Carousel.jsx";
 import { useNavigate } from "react-router-dom";
 import Card from "../components/card/Card.jsx";
-
+import cardDB from "../db/cardDB.jsx";
 export default function Home() {
   const navigate = useNavigate();
   const carauselStyle = {
@@ -27,15 +27,19 @@ export default function Home() {
     <>
       <div className="scrollbarContainer">
         {sidebarDb.map((item, index) => (
-          <Scrollbar key={index} src={item.src} />
+          <div key={index}>
+            {console.log(`You are watching ${index}'th ${item.name}`)}
+            <Scrollbar src={item.src} index={index} />
+          </div>
         ))}
       </div>
+
       <Carousel
         items={slides}
         onImageClick={handleClick}
         styles={{ carauselStyle, caroImgStyle }}
       />
-      <Card />
+      <Card items={cardDB} />
     </>
   );
 }

@@ -1,13 +1,17 @@
-body{
+body {
   margin: 0;
   font-family: sans-serif;
 }
-.after-body{
-  margin: 0 10px 0 10px ;  
-
+.after-body {
+  margin: 0 10px 0 10px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
+.mySidebar {
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+}

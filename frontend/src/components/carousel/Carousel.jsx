@@ -29,7 +29,7 @@ export default function Carousel({ items, onImageClick, styles }) {
             ...styles.caroImgStyle,
           }}
         >
-          {console.log(slide.src)}
+          {/* {console.log(slide.src)} */}
         </img>
       ))}
       <div className="carousel-indicator-container">

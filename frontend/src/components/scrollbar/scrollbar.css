@@ -1,6 +1,6 @@
-.scrollbarContainer{
-    display: flex;
-    scroll-behavior: auto;
-    overflow-y:auto;
-    padding-right: 5px;
+.scrollbarContainer {
+  display: flex;
+  scroll-behavior: auto;
+  overflow: auto;
+  padding-right: 5px;
 }
